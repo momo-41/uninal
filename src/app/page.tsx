@@ -9,6 +9,9 @@ import {
   Card,
   CardContent,
   CardHeader,
+  AppBar,
+  Toolbar,
+  IconButton,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import SaveIcon from "@mui/icons-material/Save";
@@ -41,15 +44,25 @@ export default function ReflectionApp() {
   };
 
   return (
-    <Box sx={{ minHeight: "100vh", bgcolor: "sky.50", p: 4 }}>
+    <Box height={"100vh"}>
+      <AppBar position="static" color="inherit">
+        <Toolbar>
+          <Typography ml={4} fontSize={23} flexGrow={1}>
+            Uninal
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
       <Box sx={{ maxWidth: 800, mx: "auto", my: 4 }}>
-        <Typography variant="h3" align="center" color="sky.800" gutterBottom>
+        {/* <Typography variant="h5" align="center" gutterBottom>
           振り返りアプリ
-        </Typography>
+        </Typography> */}
 
         <Card sx={{ mb: 2 }}>
-          <CardHeader title="今の目標" sx={{ bgcolor: "sky.100" }} />
           <CardContent>
+            <Typography fontSize={20} mr={1.5} mb={2}>
+              今の目標
+            </Typography>
             <TextField
               placeholder="あなたの目標を入力してください"
               fullWidth
